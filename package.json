@@ -8,7 +8,7 @@
     "peercalls": "./src/index.js"
   },
   "scripts": {
-    "start": "npm run css && npm run js && node src/index.js",
+    "start": "node src/index.js",
     "start:server": "nodemon src/index.js --ignore build/ --ignore src/client",
     "start:watch": "chastifol [ npm run js:watch ] [ npm run css:watch ] [ npm run start:server ]",
     "watch": "",
@@ -25,6 +25,7 @@
     "lint:fix": "eslint . --fix",
     "ci": "npm run lint && npm run test:coverage && npm run build"
   },
+  "heroku-run-build-script": true,
   "babel": {
     "presets": [
       [
