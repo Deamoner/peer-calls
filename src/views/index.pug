@@ -17,12 +17,13 @@ html
     #container
 
       form#form(method="get" action=baseUrl + "/call")
-        h1
-          img(src="https://www.healthbrain.co/img/logo.png" width="100%" alt="Peer Calls")
+        a(href="https://www.healthbrain.co/" target="_blank")
+          h1
+            img(src="https://www.healthbrain.co/img/logo.png" width="100%" alt="Peer Calls")
         p Group peer-to-peer calls for everyone. Create a room. Share the link.
         input(type="submit" value="New Link" style="background-color:#5cb85c;color:white;")
-        p Talk to someone interested in talking.
       form#form(method="get" action=baseUrl + "/wait")
+        p Talk to someone interested in talking
         input(type="submit" value="Talk to someone" style="background-color:#5cb85c;color:white;")
 
     footer
