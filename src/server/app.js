@@ -15,7 +15,7 @@ debug(`WebSocket URL: ${SOCKET_URL}`)
 const app = express()
 const server = createServer(config, app)
 const io = require('socket.io')(server, { path: SOCKET_URL })
-
+global.ioServer = io
 app.locals.version = require('../../package.json').version
 app.locals.baseUrl = BASE_URL
 
@@ -26,6 +26,7 @@ const router = express.Router()
 router.use('/res', express.static(path.join(__dirname, '../res')))
 router.use('/static', express.static(path.join(__dirname, '../../build')))
 router.use('/call', require('./routes/call.js'))
+router.use('/wait', require('./routes/wait.js'))
 router.use('/', require('./routes/index.js'))
 app.use(BASE_URL, router)
 
