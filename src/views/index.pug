@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Peer Calls - Video calls to anybody in the world with a private direct connection
+    title HBCalls - Video calls to anybody in the world with a private direct connection
     meta(charset="utf-8")
     meta(name="description" content="Make video calls to anybody in the world with a private connection. Share the conversation by sharing url.")
     meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
@@ -12,15 +12,14 @@ html
     link(rel="stylesheet" type="text/css" href=baseUrl + "/static/style.css")
 
   body
-    include ./_fork.pug
+
 
     #container
 
       form#form(method="get" action=baseUrl + "/call")
         h1
-          img(src=baseUrl + "/res/peer-calls.svg" width="100%" alt="Peer Calls")
+          img(src="https://www.healthbrain.co/img/logo.png" width="100%" alt="Peer Calls")
         p Group peer-to-peer calls for everyone. Create a private room. Share the link.
-        input(type="submit" value="New Session")
+        input(type="submit" value="New Link" style="background-color:#5cb85c;color:white;")
 
     footer
-      div v#{version}

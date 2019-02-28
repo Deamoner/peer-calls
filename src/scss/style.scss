@@ -16,7 +16,6 @@ html, body {
 }
 
 body {
-  background-color: $color-bg;
   color: $color-fg;
   margin: 0;
   font-family: $font-sans-serif;
@@ -92,7 +91,7 @@ body.call {
 
   input:active {
     transform: translate(0px, 1px);
-    @include button($color-primary, darken($color-warning, 10%));
+    @include button(#5cb85c, darken($color-warning, 10%));
   }
 
   input:active,
